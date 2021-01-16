@@ -1,0 +1,10 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Mern projects/Exercise Tracker/node_modules
+/Mern projects/Exercise Tracker/mern-exercise-tracker/node_modules
+/Mern projects/Exercise Tracker/mern-exercise-tracker/backend/node_modules
+
+/Mern projects/Schedule Builder/node_modules
+/Mern projects/Schedule Builder/schedulebuilder/node_modules
+/Mern projects/Schedule Builder/schedulebuilder/backend/node_modules
