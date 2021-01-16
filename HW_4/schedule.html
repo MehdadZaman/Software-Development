@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring 2021 CSE Schedule</title>
+
+    <style>
+        .daily-column {
+            border: 0pt solid black;
+            height: 60vh;
+            background-color: #EEEEEE;
+            vertical-align: 0%;
+        }
+
+        .class-sched {
+            display: inline-block;
+            background-color: rgb(135, 206, 235);
+            margin: 0.25vh;
+            border-left: 1vh solid rgb(32, 60, 216);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.88vh;
+        }
+
+        .date {
+            padding: 0.5vh;
+        }
+
+        .name {
+            margin: 1vh 0.5vh 1vh;
+        }
+
+        .time {
+            margin: 0.25vh 0.5vh 0vh;
+        }
+
+        #backBT {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #000000;
+            background-color: rgb(135, 206, 235);
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body onload="setUpSchedule()">
+
+    <h1 style="text-align: center; margin-top: 5vh;">February 2021</h1>
+
+    <table style="width: 77%; height: 80%; margin: auto;">
+
+        <tr style="width: 100%; color: white; background-color: black; 
+        font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;">
+            <th style="width: 11%;">SUN</th>
+            <th style="width: 11%;">MON</th>
+            <th style="width: 11%;">TUE</th>
+            <th style="width: 11%;">WED</th>
+            <th style="width: 11%;">THU</th>
+            <th style="width: 11%;">FRI</th>
+            <th style="width: 11%;">SAT</th>
+        </tr>
+
+        <tr>
+            <td class="daily-column">
+                <div class="date">30</div>
+            </td>
+
+            <td class="daily-column" id="monday">
+                <div class="date">31</div>
+            </td>
+
+            <td class="daily-column" id="tuesday">
+                <div class="date">1</div>
+            </td>
+
+            <td class="daily-column" id="wednesday">
+                <div class="date">2</div>
+                <div class="class-sched" id="classClone" style="display: none;">
+                    <p class="name"><strong> 4:25 PM </strong> CSE 312 </p>
+                    <p class="name">Legal and Ethical Issues in ISE</p>
+                </div>
+            </td>
+
+            <td class="daily-column" id="thursday">
+                <div class="date">3</div>
+            </td>
+
+            <td class="daily-column" id="friday">
+                <div class="date">4</div>
+            </td>
+
+            <td class="daily-column">
+                <div class="date">5</div>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <div style="text-align: center; margin-top: 5vh;">
+        <button id="backBT" onclick="loadBack()" style="margin: auto;">Back to Search</button>
+    </div>
+
+    <!--  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAHgb1ZV4K-l6jHrh8MFM7F52HXc277j-M",
+            authDomain: "schedule316-82a38.firebaseapp.com",
+            databaseURL: "https://schedule316-82a38.firebaseio.com",
+            projectId: "schedule316-82a38",
+            storageBucket: "schedule316-82a38.appspot.com",
+            messagingSenderId: "948496754868",
+            appId: "1:948496754868:web:206ef9e4d2b770d08e4fe1",
+            measurementId: "G-WHGLJP9208"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <!--  -->
+
+    <script src="schedule.js"></script>
+
+</body>
+
+</html>
